@@ -1,9 +1,16 @@
 <template>
 <div class="user-profile">
-   @ {{user.username}} - {{fullname}}
-   <br/> <span>Followers: </span> <strong>{{fellowers}}</strong>
-  <br/> <button @click="followUser">Fellow</button>
-
+  <div class="user-profile__user-panel">
+    <h1 class="user-profile__username">
+      @ {{user.username}}
+    </h1>
+    <div class="user-profile__foller-count">
+      <br/> <span>Followers: </span> <strong>{{fellowers}}</strong>
+        <br/> <button @click="followUser">Fellow</button>
+    </div>
+ 
+   
+  </div>
 </div>
 
 </template>
@@ -46,7 +53,7 @@ export default {
  .user-profle{
    display: grid;
    grid-template-columns: 1fr 3fr;
-   width: 50% 5%;
+   width:100%;
    padding: 50px 5%;
 
   
